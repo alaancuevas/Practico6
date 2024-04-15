@@ -15,7 +15,7 @@ import entidades.Rubro;
  *
  * @author Jin
  */
-public class gestionDeProductos extends javax.swing.JInternalFrame {
+public class GestionDeProductos extends javax.swing.JInternalFrame {
 
     private TreeSet<Producto> productos;
     private Producto auxiliar = null;
@@ -23,7 +23,7 @@ public class gestionDeProductos extends javax.swing.JInternalFrame {
     /**
      * Creates new form gestionDeProductos
      */
-    public gestionDeProductos(TreeSet<Producto> productos) {
+    public GestionDeProductos(TreeSet<Producto> productos) {
         initComponents();
         this.productos = productos;
         llenarCombo();

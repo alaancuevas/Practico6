@@ -43,17 +43,18 @@ public class Menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(500, 400));
-        setSize(new java.awt.Dimension(500, 400));
+        setPreferredSize(new java.awt.Dimension(840, 620));
+        setSize(new java.awt.Dimension(840, 620));
 
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 624, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 280, Short.MAX_VALUE)
+            .addGap(0, 337, Short.MAX_VALUE)
         );
 
         jmAdministracion.setText("Administración");
@@ -87,6 +88,11 @@ public class Menu extends javax.swing.JFrame {
         jmConsultas.add(jmiNombre);
 
         jmiPrecio.setText("Por Precio");
+        jmiPrecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiPrecioActionPerformed(evt);
+            }
+        });
         jmConsultas.add(jmiPrecio);
 
         jmMenuGeneral.add(jmConsultas);
@@ -111,7 +117,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         escritorio.removeAll();
         escritorio.repaint();
-        gestionDeProductos gdp = new gestionDeProductos(productos);
+        GestionDeProductos gdp = new GestionDeProductos(productos);
         gdp.setVisible(true);
         escritorio.add(gdp);
 
@@ -137,6 +143,16 @@ public class Menu extends javax.swing.JFrame {
         gdp.setVisible(true);
         escritorio.add(gdp);
     }//GEN-LAST:event_jmiNombreActionPerformed
+
+    private void jmiPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiPrecioActionPerformed
+        // TODO add your handling code here:
+        
+        escritorio.removeAll();
+        escritorio.repaint();
+        ListadoPrecio gdp = new ListadoPrecio(productos);
+        gdp.setVisible(true);
+        escritorio.add(gdp);
+    }//GEN-LAST:event_jmiPrecioActionPerformed
 
     /**
      * @param args the command line arguments
